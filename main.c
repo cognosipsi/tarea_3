@@ -48,15 +48,12 @@ int main (void) {
           opcion_2(); 
       }
       if (op == 3) {
-          printf("Ingrese el tipo\n");
           opcion_3();
       }
       if (op == 4) {
-          printf("Ingrese el nombre\n");
           opcion_4();
       }
       if (op == 5) {
-          printf("Ingrese el nombre\n");
           opcion_5();
       }
   }

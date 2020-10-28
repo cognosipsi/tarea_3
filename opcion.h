@@ -13,30 +13,17 @@
 
 
 
-const char *get_csv_field (char *, int);
+void opcion_1();
 
-void opcion_1(HashMap *MapaNombre, HashMap *MapaNombreDex,HashMap *MapaTipo,TreeMap *ArbolDex,TreeMap *ArbolPc, TreeMap *ArbolPs,HashMap *MapaRegion);
+void opcion1();
 
-void opcion1(HashMap *MapaNombre, HashMap *MapaNombreDex);
+void opcion_2();
 
-void opcion_2(HashMap *MapaNombre, HashMap *MapaNombreDex, HashMap *MapaTipo,TreeMap *ArbolDex, TreeMap *ArbolPc, TreeMap *ArbolPs,HashMap*);
+void opcion_3();
 
-void opcion_3(HashMap *);
+void opcion_4();
 
-void opcion_4(HashMap *);
-
-void opcion_5(HashMap *);
-
-void opcion_6(TreeMap *);
-
-void opcion_7(TreeMap *);
-
-void opcion_8(TreeMap *);
-
-void opcion_9(HashMap *MapaNombre, HashMap *MapaNombreDex, HashMap *MapaTipo, TreeMap *ArbolDex, TreeMap *ArbolPs, TreeMap *ArbolPc,HashMap *MapaRegion, int id);
-
-void opcion_10(HashMap *);
-
+void opcion_5();
 
 
 #endif

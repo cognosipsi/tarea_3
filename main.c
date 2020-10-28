@@ -30,74 +30,34 @@ int higher_than_int(void* key1, void* key2){
 }
 int main (void) {
   int op;
-  int op2;
-  int id;
-  HashMap *MapaNombre=createMap(100);
-  HashMap *MapaTipo=createMap(100);
-  HashMap *MapaNombreDex=createMap(100);
-  HashMap *MapaRegion=createMap(100);
-  TreeMap *ArbolDex=createTreeMap(lower_than_int);
-  TreeMap *ArbolPc=createTreeMap(higher_than_int);
-  TreeMap *ArbolPs=createTreeMap(higher_than_int);
-  while (op != 11) {
+
+  while (op != 6) {
       /* MENU */ 
-        printf("1.- Importar/Exportar desde un archivo CSV\n");
-        printf("2.- Atrapar pokemon\n");
-        printf("3.- Buscar mis pokémon por tipo\n");
-        printf("4.- Buscar mis pokémon por nombre\n");
-        printf("5.- Buscar por nombre en pokédex\n");
-        printf("6.- Mostrar todos los pokémon de la pokédex\n");
-        printf("7.- Mostrar tus pokémon por mayor PC\n");
-        printf("8.- Mostrar pokémon por mayor PS\n");
-        printf("9.- Liberar pokémon\n");
-        printf("10.- Mostrar pokémon por región\n");
-        printf("11.- Salir\n");
+        printf("1.- Importar archivo de ciudades y distancias\n");
+        printf("2.- Ciudad más cercana\n");
+        printf("3.- Crear ruta\n");
+        printf("4.- Ruta más corta entre ciudades\n");
+        printf("5.- Mejor circuito\n");
+        printf("6.- Salir\n");
         printf("\nIndica la opcion: ");
         scanf("%d", &op);
       if (op == 1) {
-          printf("Seleccione una opcion\n");
-          printf("1.- Importar desde un archivo CSV\n");
-          printf("2.- Exportar hacia un archivo CSV\n");
-          scanf("%d", &op2);
-          if (op2 == 1) {
-              opcion_1(MapaNombre,MapaNombreDex, MapaTipo,ArbolDex,ArbolPc,ArbolPs,MapaRegion);
-          }
-          else {
-              opcion1(MapaNombre, MapaNombreDex);
-          }
+          opcion_1();
       }
       if (op == 2) {
-          opcion_2(MapaNombre,MapaNombreDex,MapaTipo,ArbolDex, ArbolPc, ArbolPs, MapaRegion); 
+          opcion_2(); 
       }
       if (op == 3) {
           printf("Ingrese el tipo\n");
-          opcion_3(MapaTipo);
+          opcion_3();
       }
       if (op == 4) {
           printf("Ingrese el nombre\n");
-          opcion_4(MapaNombre);
+          opcion_4();
       }
       if (op == 5) {
           printf("Ingrese el nombre\n");
-          opcion_5(MapaNombreDex);
-      }
-      if (op == 6) {
-          opcion_6(ArbolDex);
-      }
-      if (op == 7) {
-          opcion_7(ArbolPc);
-      }
-      if (op == 8) {
-          opcion_8(ArbolPs);
-      }
-      if (op == 9) {
-          printf("Ingrese id a borrar\n");
-          scanf("%d",&id);
-          opcion_9 (MapaNombre,MapaNombreDex,MapaTipo,ArbolDex, ArbolPs,ArbolPc,MapaRegion,id);
-      }
-      if (op == 10) {
-          printf("Ingrese la region\n");
-          opcion_10(MapaRegion);
+          opcion_5();
       }
   }
   return 0;

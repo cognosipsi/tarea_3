@@ -4,7 +4,6 @@
 #include "hashmap.h"
 #include "list.h"
 #include "opcion.h"
-#include "treemap.h"
 //gcc -g main.c hashmap-answer.c list.c opcion.c treemap.c -o tarea_2
 /*int lower_than_string(void* key1, void* key2){
     char* k1=(char*) key1;

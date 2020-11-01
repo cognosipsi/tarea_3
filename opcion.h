@@ -12,13 +12,11 @@
 
 
 
-void opcion_1();
+void opcion_1(HashMap *);
 
-void opcion1();
+void opcion_2(HashMap *, char *);
 
-void opcion_2();
-
-void opcion_3();
+void opcion_3(HashMap *);
 
 void opcion_4();
 

@@ -5,31 +5,11 @@
 #include "list.h"
 #include "opcion.h"
 //gcc -g main.c hashmap-answer.c list.c opcion.c treemap.c -o tarea_2
-/*int lower_than_string(void* key1, void* key2){
-    char* k1=(char*) key1;
-    char* k2=(char*) key2;
-    if(strcmp(k1,k2)<0) return 1;
-    return 0;
-}*/
-/*int lower_than_string(void* key1, void* key2){
-    int k1=atoi((char*) key1);
-    int k2=atoi((char*) key2);
-    if(k1<k2) return 1;
-    return 0;
-}*/
-int lower_than_int(void* key1, void* key2){
-    int k1 = *((int*) (key1));
-    int k2 = *((int*) (key2));
-    return k1<k2;
-}
-int higher_than_int(void* key1, void* key2){
-    int k1 = *((int*) (key1));
-    int k2 = *((int*) (key2));
-    return k1>k2;
-}
+
 int main (void) {
   int op;
-
+  char *ciudad;
+  HashMap *ciudades = createMap(50);
   while (op != 6) {
       /* MENU */ 
         printf("1.- Importar archivo de ciudades y distancias\n");
@@ -41,13 +21,14 @@ int main (void) {
         printf("\nIndica la opcion: ");
         scanf("%d", &op);
       if (op == 1) {
-          opcion_1();
+          opcion_1(ciudades);
       }
       if (op == 2) {
-          opcion_2(); 
+          scanf("%s", ciudad);
+          opcion_2(ciudades, ciudad);
       }
       if (op == 3) {
-          opcion_3();
+          opcion_3(ciudades);
       }
       if (op == 4) {
           opcion_4();

@@ -13,6 +13,8 @@ gcc -g main.c opcion.c -o tarea_3
 ./tarea_3
 
 Opciones que funcionan correctamente:
+  *Opción 1
+  *Opción 2
 
 Problemas:
 

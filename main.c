@@ -4,7 +4,7 @@
 #include "hashmap.h"
 #include "list.h"
 #include "opcion.h"
-//gcc -g main.c hashmap-answer.c list.c opcion.c treemap.c -o tarea_2
+// gcc -g main.c hashmap-answer.c list.c opcion.c -o tarea_3
 
 int main (void) {
   int op;
@@ -24,6 +24,7 @@ int main (void) {
           opcion_1(ciudades);
       }
       if (op == 2) {
+          printf("Ingrese la ciudad\n");
           scanf("%s", ciudad);
           opcion_2(ciudades, ciudad);
       }

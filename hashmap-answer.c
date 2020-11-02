@@ -133,7 +133,7 @@ void * firstMap(HashMap * map) {
     for (i = 0; i < map->capacity; i++) {
         if (map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
             map->current = i;
-            return (void *)map->buckets[i]->value;
+            return (void *)map->buckets[i];
         }
     }
     return NULL;
@@ -147,7 +147,7 @@ void * nextMap(HashMap * map) {
     for (i = (map->current + 1); i < map->capacity; i++) {
         if (map->buckets[i] != NULL && map->buckets[i]->value != NULL) {
             map->current = i;
-            return (void *)map->buckets[i]->value;
+            return (void *)map->buckets[i];
         }
     }
     

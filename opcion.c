@@ -155,21 +155,57 @@ void opcion_3(HashMap *ciudades) {
     /*char ciudad[20];
     int resp = 2;
     
-    printf("Ingrese ciudad\n");
+    printf("Ingrese ciudad"\n);
     scanf("%s", &ciudad);
     
-    printf("¿Desea terminar su ruta?"\n);
+    printf("¿Desea terminar su ruta?\n");
     printf("1. Si\n");
     printf("2. No\n");
     scanf("%d", resp);
     if (resp == 2) {
         opcion_3(ciudades);
+    }*/
+    char ciudad[30];
+    int distancia=0;
+    Pair *info;
+    int primera = 1; 
+    Pair *infodistancia;
+    List *L=create_list(); //guarda toda la ruta
+    Ciudad *c;
+    //char *recorrido;
+    void *i;
+    printf("Ingrese ciudad\n");
+    scanf("%s", ciudad);
+    c = searchMap(ciudades, ciudad);
+    if( !c ) {
+      printf("No existe la ciudad \n");
+      return;
     }
-    */
-}
+    do{
+      push_back(L,c);
+      if(primera == 0) {
+        distancia = distancia +*(int *)i;
+      }
 
-void opcion_4() {
-
+      info = firstMap(c->distancias);
+      do{
+        printf("%s \n", info->key);
+        info = nextMap( c->distancias );
+      }while(info != NULL);
+      printf("\nIngrese la siguiente ciudad entre las opciones disponibles.\nEn caso que quiera terminar la ruta ingrese cualquier texto.\n");
+      scanf("%s", ciudad);
+      i=searchMap(c->distancias,ciudad);
+      c = searchMap(ciudades, ciudad);
+      primera = 0;
+    }while ( i != NULL);
+    c=first(L);
+    while(c != NULL){
+      printf("%s \n", c->nombre);
+      c = next(L);
+    }
+    printf("%d kilometros\n\n", distancia);
+}    
+void opcion_4() {    
 }
 
 void opcion_5(){

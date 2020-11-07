@@ -4,9 +4,9 @@
 typedef struct Heap Heap;
 
 Heap* createHeap();
-void* heap_top(Heap* pq);
-void heap_push(Heap* pq, void* data, int priority);
-void heap_pop(Heap* pq);
+void* heap_top(Heap*);
+void heap_push(Heap*, void*, int);
+void heap_pop(Heap*);
 
 
 #endif /* HashMap_h */

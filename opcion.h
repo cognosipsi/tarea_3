@@ -9,11 +9,12 @@
 #include "list.h"
 #include "opcion.h"
 #include "hashmap.h"
-#include "graph.h"
+//#include "graph.h"
 
 typedef struct Node Node;
 
-Node *breadth_first_search(Node *);
+//Node *breadth_first_search(Node *, char,HashMap *);
+int is_empty(List*);
 
 void opcion_1(HashMap *);
 

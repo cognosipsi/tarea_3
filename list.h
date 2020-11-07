@@ -6,6 +6,7 @@
 
 
 typedef struct List List;
+typedef List Queue;
 
 List* create_list();
 

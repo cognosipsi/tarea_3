@@ -6,6 +6,8 @@
 #include "list.h"
 #include "opcion.h"
 #include "hashmap.h"
+#include "heap.h"
+#include "graph.h"
 
 typedef struct{
    char nombre[30];
@@ -23,6 +25,12 @@ typedef struct{
 struct Pair {
      char * key;
      void * value;
+};
+
+struct Node{
+   char ciudad[30];
+   int dist;
+   Node* prev;
 };
 
 const char *get_csv_field (char * tmp, int k) {
@@ -205,7 +213,15 @@ void opcion_3(HashMap *ciudades) {
     }
     printf("%d kilometros\n\n", distancia);
 }    
-void opcion_4() {    
+void opcion_4(HashMap *ciudades) {    
+  char partida[30], destino[30];
+  Node *n = createNode();
+  printf("escriba ciudad de partida");
+  scanf("%s", partida);
+  printf("escriba ciudad de destino");
+  scanf("%s", destino);
+  strcpy(n-> ciudad, partida);
+  n-> dist = 0;
 }
 
 void opcion_5(){

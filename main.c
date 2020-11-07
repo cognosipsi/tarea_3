@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
-#include "hashmap.h"
+#include <ctype.h>
 #include "list.h"
 #include "opcion.h"
+#include "hashmap.h"
+#include "heap.h"
+#include "graph.h"
 // gcc -g main.c hashmap-answer.c list.c opcion.c -o tarea_3
+
 
 int main (void) {
   int op;
@@ -32,7 +37,7 @@ int main (void) {
           opcion_3(ciudades);
       }
       if (op == 4) {
-          opcion_4();
+          opcion_4(ciudades);
       }
       if (op == 5) {
           opcion_5();

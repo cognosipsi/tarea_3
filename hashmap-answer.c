@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
-#include <math.h>
 #include <ctype.h>
+#include "list.h"
+#include "opcion.h"
 #include "hashmap.h"
+#include "heap.h"
+#include "graph.h"
 
 typedef struct Pair Pair;
 typedef struct HashMap HashMap;

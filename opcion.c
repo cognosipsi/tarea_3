@@ -224,8 +224,9 @@ void opcion_4(HashMap *ciudades) {
     strcpy(n-> ciudad, partida);
     n-> dist = 0;
     ultimo=breadth_first_search(n);
-    while (n->prev != NULL) {
+    while (ultimo!= NULL) {
       printf("%s", n->ciudad);
+      ultimo=
     }
 }
 

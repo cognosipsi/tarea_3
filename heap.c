@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+<<<<<<< HEAD
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
@@ -8,6 +9,8 @@
 #include "hashmap.h"
 #include "heap.h"
 #include "graph.h"
+=======
+>>>>>>> origin/1-y-2
 #include <string.h>
 #include <math.h>
 #include <ctype.h>
@@ -24,11 +27,14 @@ typedef struct Heap{
   int capac;
 } Heap;
 
+<<<<<<< HEAD
 /*typedef struct{
  int* data; //arreglo dinámico
  int head; int tail;
  int c; //tamaño actual del arreglo
 } Queue;*/
+=======
+>>>>>>> origin/1-y-2
 
 void* heap_top(Heap* pq){
     if(pq->size==0) return NULL;
@@ -91,6 +97,7 @@ Heap* createHeap(){
 
     return h;
 }
+<<<<<<< HEAD
 
 /*Queue *push_queue() {
     Heap *heap = createHeap();
@@ -103,3 +110,5 @@ Heap* createHeap(){
     }
     return 
 }*/
+=======
+>>>>>>> origin/1-y-2

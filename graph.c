@@ -74,7 +74,7 @@ void pop(Queue* Q){
   pop_front(Q);
 }
 
-Node *breadth_first_search(Node *I,char destino[30],HashMap *ciudades) {
+Node *breadth_first_search(Node *I, char destino[30],HashMap *ciudades) {
     Node *n;
     Node *adj;
     List *L;

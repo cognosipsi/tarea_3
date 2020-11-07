@@ -16,6 +16,7 @@ Opciones que funcionan correctamente:
   * Opción 1
   * Opción 2
   * Opción 3
+  * Opción 4
 
 Problemas:
 

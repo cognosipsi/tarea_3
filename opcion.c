@@ -93,7 +93,7 @@ void* top(Queue* Q){
 }
 
 void push(Queue* Q, void* data){
-   push_front(Q,data);
+   push_back(Q,data);
 }
 
 void pop(Queue* Q){
@@ -102,6 +102,8 @@ void pop(Queue* Q){
 
 Node *breadth_first_search(Node *I, char destino[30],HashMap *ciudades) {
     Node *n;
+    Node *mejor;
+    int min=10000;
     Node *adj;
     List *L;
     Queue *Q = create_Queue();
@@ -109,18 +111,22 @@ Node *breadth_first_search(Node *I, char destino[30],HashMap *ciudades) {
     while (!is_empty(Q)) {
         n = top(Q);
         pop(Q);
-        if (is_final(n,destino)) {
-            return n;
-        }
+        if(min < n->dist) continue;
+            if (is_final(n,destino)) {
+                if(min>n->dist) {
+                  mejor=n;
+                  min=n->dist;
+                  continue;
+                }
+            }
         L = get_adj_nodes(n, ciudades);
         adj = first(L);
         while(adj) {
             push(Q, adj);
             adj = next(L);
         }
-        free(n);
     }
-    return NULL;
+    return mejor;
 }
 
 const char *get_csv_field (char * tmp, int k) {
@@ -308,15 +314,22 @@ void opcion_4(HashMap *ciudades) {
     Node *n = createNode();
     Node *ultimo = createNode();
     printf("Escriba ciudad de partida\n");
-    scanf("%s", partida);
+    do{
+      scanf("%s", partida);
+    }while(searchMap(ciudades,partida)==NULL);
     printf("Escriba ciudad de destino\n");
-    scanf("%s", destino);
+    do{
+      scanf("%s", destino);
+    }while(searchMap(ciudades,destino)==NULL);
+    n->prev=NULL; 
     strcpy(n-> ciudad, partida);
     n-> dist = 0;
     ultimo=breadth_first_search(n,destino,ciudades);
-    while (ultimo!= NULL) {
-      printf("%s", ultimo->ciudad);
-      ultimo=ultimo->prev;
+    printf("%d \n",ultimo->dist);
+    while (ultimo!= NULL) {      
+        printf("%s \n", ultimo->ciudad);
+        if(strcmp(ultimo->ciudad,partida)==0) return;
+        ultimo = ultimo->prev;
     }
 }
 

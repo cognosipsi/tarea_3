@@ -12,10 +12,12 @@
 #include "heap.h"
 
 Node *createNode();
-List *get_adj_nodes(Node *);
+List *get_adj_nodes(Node *,HashMap *);
+int is_final(Node *);
 Queue *create_Queue();
 void *top(Queue *);
-
 void push(Queue *, void *);
+void pop(Queue* Q);
+Node *breadth_first_search(Node *, char, HashMap *);
 
 #endif

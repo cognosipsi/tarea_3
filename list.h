@@ -10,24 +10,26 @@ typedef List Queue;
 
 List* create_list();
 
-void push_back(List* L, void* object);
+void push_back(List *, void *);
 
-void pop_front(List* L);
+void push_front(List *, void *);
 
-void pop_back(List* L);
+void pop_front(List *);
 
-void pop_current(List* L);
+void pop_back(List *);
 
-int is_empty(List* L);
+void pop_current(List *);
+
+int is_empty(List *);
 
 //int size(List* L);
-long listCount(List* L);
+long listCount(List *);
 
-void* first(List* L);
+void* first(List *);
 
-void* next(List* L);
+void* next(List *);
 
-void clear(List* L);
+void clear(List *);
 
 
 

@@ -214,14 +214,19 @@ void opcion_3(HashMap *ciudades) {
     printf("%d kilometros\n\n", distancia);
 }    
 void opcion_4(HashMap *ciudades) {    
-  char partida[30], destino[30];
-  Node *n = createNode();
-  printf("escriba ciudad de partida");
-  scanf("%s", partida);
-  printf("escriba ciudad de destino");
-  scanf("%s", destino);
-  strcpy(n-> ciudad, partida);
-  n-> dist = 0;
+    char partida[30], destino[30];
+    Node *n = createNode();
+    Node *ultimo = createNode();
+    printf("escriba ciudad de partida");
+    scanf("%s", partida);
+    printf("escriba ciudad de destino");
+    scanf("%s", destino);
+    strcpy(n-> ciudad, partida);
+    n-> dist = 0;
+    ultimo=breadth_first_search(n);
+    while (n->prev != NULL) {
+      printf("%s", n->ciudad);
+    }
 }
 
 void opcion_5(){

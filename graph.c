@@ -43,9 +43,19 @@ List* get_adj_nodes(Node* n,HashMap *ciudades){
       nuevo=(Node*) malloc(sizeof(Node));
       strcpy(nuevo->ciudad,info->key);
       nuevo->prev=n;
-      nuevo->dist=n->dist+;
+      nuevo->dist=n->dist+*(int *)info->value;
+      if(nuevo->prev->prev==NULL) {
+          push_back(L,nuevo);
+      }else if(/*is_valid(n)*/strcmp(nuevo->ciudad,nuevo->prev->prev->ciudad)!=0) {
+        push_back(L,nuevo);
+      }
       info = nextMap( c->distancias );
     }while(info != NULL);    
+}
+
+int is_final(Node *n,char destino[30]) {
+  if(strcmp(n->ciudad,destino)==0) return 1;
+  return 0;
 }
 
 Queue *create_Queue() {
@@ -60,7 +70,11 @@ void push(Queue* Q, void* data){
    push_front(Q,data);
 }
 
-Node *breadth_first_search(Node *I) {
+void pop(Queue* Q){
+  pop_front(Q);
+}
+
+Node *breadth_first_search(Node *I,char destino[30],HashMap *ciudades) {
     Node *n;
     Node *adj;
     List *L;
@@ -68,11 +82,11 @@ Node *breadth_first_search(Node *I) {
     push_back(Q, I);
     while (!is_empty(Q)) {
         n = top(Q);
-        heap_pop(Q);
-        if (is_final(n)) {
+        pop(Q);
+        if (is_final(n,destino)) {
             return n;
         }
-        L = get_adj_nodes(n);
+        L = get_adj_nodes(n, ciudades);
         adj = first(L);
         while(adj) {
             push(Q, adj);

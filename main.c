@@ -7,8 +7,8 @@
 #include "opcion.h"
 #include "hashmap.h"
 #include "heap.h"
-#include "graph.h"
-// gcc -g main.c graph.c hashmap-answer.c heap.c list.c opcion.c -o tarea_3
+//#include "graph.h"
+// gcc -g main.c hashmap-answer.c heap.c list.c opcion.c -o tarea_3
 
 
 int main (void) {

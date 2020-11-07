@@ -7,7 +7,7 @@
 #include "opcion.h"
 #include "hashmap.h"
 #include "heap.h"
-#include "graph.h"
+//#include "graph.h"
 
 typedef struct{
    char nombre[30];

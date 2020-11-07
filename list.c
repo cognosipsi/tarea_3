@@ -22,9 +22,16 @@
  SOFTWARE.
  */
 
-#include "list.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
+#include <stdbool.h>
+#include <string.h>
+#include <ctype.h>
+#include "list.h"
+#include "opcion.h"
+#include "hashmap.h"
+#include "heap.h"
+#include "graph.h"
 
 typedef struct Node Node;
 

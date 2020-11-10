@@ -6,9 +6,7 @@
 #include "list.h"
 #include "opcion.h"
 #include "hashmap.h"
-#include "heap.h"
-//#include "graph.h"
-// gcc -g main.c hashmap-answer.c heap.c list.c opcion.c -o tarea_3
+// gcc -g main.c hashmap-answer.c list.c opcion.c -o tarea_3
 
 
 int main (void) {
@@ -40,7 +38,7 @@ int main (void) {
           opcion_4(ciudades);
       }
       if (op == 5) {
-          opcion_5();
+          opcion_5(ciudades);
       }
   }
   return 0;

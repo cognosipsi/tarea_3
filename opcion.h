@@ -9,7 +9,6 @@
 #include "list.h"
 #include "opcion.h"
 #include "hashmap.h"
-//#include "graph.h"
 
 typedef struct Node Node;
 
@@ -24,7 +23,7 @@ void opcion_3(HashMap *);
 
 void opcion_4(HashMap *);
 
-void opcion_5();
+void opcion_5(HashMap *);
 
 
 #endif

@@ -34,4 +34,4 @@ Albuquerque Tulsa 636
 Miami NewOrleans 648
 St.Louis Washington 676
 Dallas Atlanta 685
-Chicago Boston 806
+Chicago Boston 806 
